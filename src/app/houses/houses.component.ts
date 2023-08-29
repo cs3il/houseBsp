@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { House } from '../house';
+import { HOUSES } from '../mock-houses';
 
 @Component({
   selector: 'app-houses',
@@ -7,10 +8,5 @@ import { House } from '../house';
   styleUrls: ['./houses.component.css']
 })
 export class HousesComponent {
-
-  house: House = {
-    id: 1,
-    name: 'Villa',
-    owned: true
-  }
+  houses = HOUSES
 }

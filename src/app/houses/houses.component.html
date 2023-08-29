@@ -1,7 +1,9 @@
-<h2>{{ house.name | uppercase }} Details</h2>
-<div><span>id: </span>{{ house.id }}</div>
-<div>
-    <label for="name">House name:</label>
-    <input id="name" [(ngModel)]="house.name">
-</div>
-<div><span>owned: </span>{{ house.owned ? "Yes" : "No" }}</div>
+<h2>My houses</h2>
+<ul class="houses">
+    <li *ngFor="let house of houses">
+        <button type="button">
+            <span class="badge"> {{ house.id }}</span>
+            <span class="info"> {{ house.name }}</span>
+        </button>
+    </li>
+</ul>
