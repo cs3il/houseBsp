@@ -1,4 +1,7 @@
 <h2>{{ house.name | uppercase }} Details</h2>
 <div><span>id: </span>{{ house.id }}</div>
-<div><span>name: </span>{{ house.name }}</div>
+<div>
+    <label for="name">House name:</label>
+    <input id="name" [(ngModel)]="house.name">
+</div>
 <div><span>owned: </span>{{ house.owned ? "Yes" : "No" }}</div>
