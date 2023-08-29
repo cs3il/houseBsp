@@ -1,7 +1,7 @@
 <h2>My houses</h2>
 <ul class="houses">
     <li *ngFor="let house of houses">
-        <button type="button" (click)="onSelect(house)" [ngClass]="{'selected' : house === selectedHouse}">
+        <button type="button" (click)="onSelect(house)" [class.selected]="house === selectedHouse">
             <span class="badge"> {{ house.id }}</span>
             <span class="info"> {{ house.name }}</span>
         </button>
