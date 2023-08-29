@@ -1,0 +1,9 @@
+<div *ngIf="house">
+    <h2>{{ house.name | uppercase }} Details</h2>
+    <div>id: {{ house.id }}</div>
+    <div>
+        <label for="house-name">House name:</label>
+        <input id="house-name" [(ngModel)]="house.name" placeholder="name">
+    </div>
+    <div>owned: {{ house.owned ? "Yes" : "No" }}</div>
+</div>
