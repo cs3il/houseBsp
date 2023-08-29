@@ -20,7 +20,8 @@ export class HousesComponent {
   }
 
   getHouses(): void {
-    this.houses = this.houseService.getHouses();
+    this.houseService.getHouses()
+      .subscribe(houses => this.houses = houses);
   }
 
   onSelect(house: House) {
