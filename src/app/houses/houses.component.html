@@ -1,4 +1,4 @@
-<h2>{{ house.name }} Details</h2>
+<h2>{{ house.name | uppercase }} Details</h2>
 <div><span>id: </span>{{ house.id }}</div>
 <div><span>name: </span>{{ house.name }}</div>
-<div><span>owned: </span>{{ house.owned }}</div>
+<div><span>owned: </span>{{ house.owned ? "Yes" : "No" }}</div>
