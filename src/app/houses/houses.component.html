@@ -1,9 +1,18 @@
 <h2>My houses</h2>
 <ul class="houses">
     <li *ngFor="let house of houses">
-        <button type="button">
+        <button type="button" (click)="onSelect(house)">
             <span class="badge"> {{ house.id }}</span>
             <span class="info"> {{ house.name }}</span>
         </button>
     </li>
 </ul>
+<div *ngIf="selectedHouse">
+    <h2>{{ selectedHouse.name | uppercase }} Details</h2>
+    <div>id: {{ selectedHouse.id }}</div>
+    <div>
+        <label for="house-name">House name:</label>
+        <input id="house-name" [(ngModel)]="selectedHouse.name" placeholder="name">
+    </div>
+    <div>owned: {{ selectedHouse.owned ? "Yes" : "No" }}</div>
+</div>

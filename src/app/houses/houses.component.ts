@@ -8,5 +8,11 @@ import { HOUSES } from '../mock-houses';
   styleUrls: ['./houses.component.css']
 })
 export class HousesComponent {
-  houses = HOUSES
+  houses = HOUSES;
+
+  selectedHouse?: House;
+
+  onSelect(house: House) {
+    this.selectedHouse = house;
+  }
 }
