@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { House } from '../house';
+import { HouseService } from '../house.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,4 +9,14 @@ import { Component } from '@angular/core';
 })
 export class DashboardComponent {
 
+  houses: House[] = [];
+
+  constructor(private houseService: HouseService) {
+    this.getHouses()
+  }
+
+  getHouses(): void {
+    this.houseService.getHouses()
+      .subscribe(houses => this.houses = houses.slice(0, 4))
+  }
 }
