@@ -38,6 +38,12 @@ export class HouseService {
       .pipe(tap((newHouse: House) => this.log(`added house w/ id=${newHouse.id}`)));
   }
 
+  deleteHouse(id: number): Observable<House> {
+    const url = `${this.housesUrl}/${id}`;
+    return this.http.delete<House>(url, this.httpOptions)
+      .pipe(tap(_ => this.log(`deleted house id=${id}`)));
+  }
+
   private log(message: string) {
     this.messageService.add(`HouseService: ${message}`);
   }

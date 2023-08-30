@@ -11,6 +11,7 @@
         <a routerLink="/detail/{{house.id}}">
             <span class="badge">{{house.id}}</span>{{house.name}}
         </a>
+        <button type="button" class="delete" (click)="delete(house)">x</button>
     </li>
 </ul>
 <app-house-detail [house]="selectedHouse"></app-house-detail>

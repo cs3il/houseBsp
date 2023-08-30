@@ -34,6 +34,11 @@ export class HousesComponent {
       .subscribe(house => this.houses.push(house));
   }
 
+  delete(houseTD: House): void {
+    this.houses = this.houses.filter(house => house !== houseTD);
+    this.houseService.deleteHouse(houseTD.id).subscribe();
+  }
+
   /*
   onSelect(house: House) {
     this.selectedHouse = house;
