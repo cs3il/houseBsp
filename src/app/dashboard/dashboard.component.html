@@ -1,6 +1,6 @@
 <h2>Top Houses</h2>
 <div class="houses-menu">
-    <a *ngFor="let house of houses">
+    <a *ngFor="let house of houses" routerLink="/detail/{{house.id}}">
         {{ house.name }}
     </a>
 </div>
