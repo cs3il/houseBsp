@@ -27,4 +27,8 @@ export class HouseDetailComponent {
     this.houseService.getHouse(id)
       .subscribe(house => this.house = house);
   }
+
+  goBack(): void {
+    this.location.back();
+  }
 }
