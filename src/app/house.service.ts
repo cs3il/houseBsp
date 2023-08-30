@@ -16,4 +16,10 @@ export class HouseService {
     this.messageService.add('HouseService: fetched houses')
     return houses;
   }
+
+  getHouse(id: number): Observable<House> {
+    const house = HOUSES.find(house => house.id === id)!;
+    this.messageService.add(`HouseService: fetched house id=${id}`);
+    return of(house);
+  }
 }

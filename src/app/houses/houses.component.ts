@@ -25,8 +25,10 @@ export class HousesComponent {
       .subscribe(houses => this.houses = houses);
   }
 
+  /*
   onSelect(house: House) {
     this.selectedHouse = house;
     this.messageService.add(`HousesComponent: Selected house id=${house.id}`);
   }
+  */
 }
