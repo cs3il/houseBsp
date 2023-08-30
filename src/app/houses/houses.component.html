@@ -1,10 +1,9 @@
 <h2>My houses</h2>
 <ul class="houses">
     <li *ngFor="let house of houses">
-        <button type="button" (click)="onSelect(house)" [class.selected]="house === selectedHouse">
-            <span class="badge"> {{ house.id }}</span>
-            <span class="info"> {{ house.name }}</span>
-        </button>
+        <a routerLink="/detail/{{house.id}}">
+            <span class="badge">{{house.id}}</span>{{house.name}}
+        </a>
     </li>
 </ul>
 <app-house-detail [house]="selectedHouse"></app-house-detail>
