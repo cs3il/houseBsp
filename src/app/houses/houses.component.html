@@ -1,4 +1,11 @@
 <h2>My houses</h2>
+<div>
+    <label for="new-house">House name: </label>
+    <input id="new-house" #houseName/>
+    <button type="button" class="add-button" (click)="add(houseName.value); houseName.value=''">
+        Add house
+    </button>
+</div>
 <ul class="houses">
     <li *ngFor="let house of houses">
         <a routerLink="/detail/{{house.id}}">

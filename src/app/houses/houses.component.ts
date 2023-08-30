@@ -25,6 +25,15 @@ export class HousesComponent {
       .subscribe(houses => this.houses = houses);
   }
 
+  add(name: string): void {
+    name = name.trim();
+    if(!name) {
+      return;
+    }
+    this.houseService.addHouse({ name} as House)
+      .subscribe(house => this.houses.push(house));
+  }
+
   /*
   onSelect(house: House) {
     this.selectedHouse = house;

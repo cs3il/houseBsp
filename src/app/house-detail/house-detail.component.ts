@@ -31,4 +31,11 @@ export class HouseDetailComponent {
   goBack(): void {
     this.location.back();
   }
+
+  save(): void {
+    if(this.house) {
+      this.houseService.updateHouse(this.house)
+        .subscribe(() => this.goBack());
+    }
+  }
 }
