@@ -5,12 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HousesComponent } from './houses/houses.component';
 import { HouseDetailComponent } from './house-detail/house-detail.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HousesComponent,
-    HouseDetailComponent
+    HouseDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
